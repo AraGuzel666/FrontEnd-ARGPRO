@@ -1,0 +1,16 @@
+.header{
+    background-color: #0d2c3e;
+}
+
+app-social{
+    float: right;
+    margin-top: 25px;
+}
+
+@media (max-width : 575px){
+    app-social{
+        float: left;
+    }
+}
+
+

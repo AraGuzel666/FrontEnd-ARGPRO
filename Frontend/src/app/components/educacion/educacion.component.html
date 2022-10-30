@@ -1,0 +1,24 @@
+
+    <!-- Experiencia Laboral -->
+    <table class="table col-12 text-center ">
+        <div class="col-12 text-center">
+            <h1>Educación</h1>
+                <button type="button" class="btn btn-primary" routerLink="/nuevaedu" *ngIf="isLogged">
+                    Agregar Educación
+                </button>
+            </div>
+
+    <div *ngFor="let educacion of educacion">
+        <h4>{{educacion.nombreE}}</h4>
+        <p><em>Descripción</em></p>
+        <p>{{educacion.descripcionE}}</p>
+        <button *ngIf="isLogged" class="btn btn-dark m-2 col-lg-3" routerLink="/editedu/{{educacion.id}}">
+          <i class="bi bi-pencil-square m-2"></i>
+          Editar educación
+        </button>
+        <button *ngIf="isLogged" class="btn btn-danger m-2 col-lg-3" (click)="delete(educacion.id)">
+        <i class="bi bi-trash3 m-2"></i>
+        Eliminar
+        </button>
+      </div>
+    </table>
